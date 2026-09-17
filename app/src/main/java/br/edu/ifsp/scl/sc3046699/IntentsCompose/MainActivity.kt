@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose
+package br.edu.ifsp.scl.sc3046699.IntentsCompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,13 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import br.edu.ifsp.scl.sc3046699.navigationcompose.Navigation.MainNavHost
-import br.edu.ifsp.scl.sc3046699.navigationcompose.ui.theme.NavigationComposeTheme
+import br.edu.ifsp.scl.sc3046699.IntentsCompose.Navigation.MainNavHost
+import br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.theme.NavigationComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

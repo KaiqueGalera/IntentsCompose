@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose
+package br.edu.ifsp.scl.sc3046699.IntentsCompose
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

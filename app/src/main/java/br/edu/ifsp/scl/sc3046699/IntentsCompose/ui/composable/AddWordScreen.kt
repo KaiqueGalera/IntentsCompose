@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose.ui.composable
+package br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.composable
 
 import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
@@ -9,17 +9,22 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.edu.ifsp.scl.sc3046699.navigationcompose.ui.theme.NavigationComposeTheme
+import br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.theme.NavigationComposeTheme
 
 @Composable
-fun HomeScreen(
-    currentText: String,
+fun AddWordScreen(
+    currentText: String = "",
     modifier: Modifier,
-    onResetClick: () -> Unit,
-    onAddWordClick: () -> Unit
+    onConcatenateClick: (String) -> Unit
 ) {
+    var newWord by remember { mutableStateOf("") }
+
     Column(modifier = modifier.fillMaxWidth()) {
         OutlinedTextField(
             value = currentText,
@@ -28,17 +33,17 @@ fun HomeScreen(
             label = { Text("String atual") },
             modifier = Modifier.fillMaxWidth()
         )
+        OutlinedTextField(
+            value = newWord,
+            onValueChange = { newWord = it },
+            label = { Text("Nova palavra") },
+            modifier = Modifier.fillMaxWidth()
+        )
         Button(
-            onClick = onAddWordClick,
+            onClick = { onConcatenateClick(newWord) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Adicionar palavra")
-        }
-        Button(
-            onClick = onResetClick,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Reiniciar")
+            Text("Concatenar")
         }
     }
 }
@@ -46,14 +51,13 @@ fun HomeScreen(
 @Preview(name = "Light mode", showBackground = true, uiMode = UI_MODE_NIGHT_NO)
 @Preview(name = "Dark mode", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-fun HomeScreenPreview() {
+fun AddWordScreenPreview() {
     NavigationComposeTheme {
         Surface {
-            HomeScreen(
+            AddWordScreen(
                 currentText = "Olá mundo",
                 modifier = Modifier,
-                onResetClick = {},
-                onAddWordClick = {}
+                onConcatenateClick = {}
             )
         }
     }

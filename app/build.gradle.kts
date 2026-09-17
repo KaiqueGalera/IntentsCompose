@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "br.edu.ifsp.scl.sc3046699.navigationcompose"
+    namespace = "br.edu.ifsp.scl.sc3046699.IntentsCompose"
     compileSdk {
         version = release(37)
     }

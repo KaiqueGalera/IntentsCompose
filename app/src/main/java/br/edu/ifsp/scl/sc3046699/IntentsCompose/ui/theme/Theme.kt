@@ -1,6 +1,5 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose.ui.theme
+package br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

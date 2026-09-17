@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose.ui.theme
+package br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose.Navigation
+package br.edu.ifsp.scl.sc3046699.IntentsCompose.Navigation
 
 import android.net.Uri
 import androidx.compose.runtime.Composable
@@ -11,8 +11,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import br.edu.ifsp.scl.sc3046699.navigationcompose.ui.composable.AddWordScreen
-import br.edu.ifsp.scl.sc3046699.navigationcompose.ui.composable.HomeScreen
+import br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.composable.AddWordScreen
+import br.edu.ifsp.scl.sc3046699.IntentsCompose.ui.composable.HomeScreen
 
 private const val WORD_ADDED = "word_added"
 

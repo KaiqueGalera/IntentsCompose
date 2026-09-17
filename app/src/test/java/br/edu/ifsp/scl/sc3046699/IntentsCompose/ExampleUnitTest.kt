@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.sc3046699.navigationcompose
+package br.edu.ifsp.scl.sc3046699.IntentsCompose
 
 import org.junit.Test
 
